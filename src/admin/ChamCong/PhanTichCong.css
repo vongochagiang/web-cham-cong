@@ -1,0 +1,257 @@
+.admin-container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #2c2c2c;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.kfc-logo {
+  height: 35px;
+}
+
+.logo-section h1 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.main-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #b8b8b8;
+  transition: all 0.3s ease;
+}
+
+.nav-btn.active {
+  color: #ffc107;
+  border-bottom: 2px solid #ffc107;
+}
+
+.nav-btn:hover {
+  color: #ffffff;
+}
+
+.sub-nav {
+  background-color: #3c3c3c;
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.sub-nav-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #b8b8b8;
+  transition: all 0.3s ease;
+}
+
+.sub-nav-btn.active {
+  color: #ffc107;
+  border-bottom: 2px solid #ffc107;
+}
+
+.sub-nav-btn:hover {
+  color: #ffffff;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.store-selector {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.store-section, .date-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-picker-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.date-display {
+  font-size: 14px;
+  color: #333;
+  padding: 4px 8px;
+}
+
+.date-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.calendar-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: #666;
+}
+
+.calendar-icon:hover {
+  color: #333;
+}
+
+.nav-btn {
+  padding: 4px 8px;
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #666;
+}
+
+.nav-btn:hover {
+  background: #f0f0f0;
+}
+
+.calendar-popup {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  margin-top: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background: white;
+  border-radius: 4px;
+}
+
+/* Tùy chỉnh style cho date picker */
+.react-datepicker {
+  font-family: inherit;
+  border: none;
+}
+
+.react-datepicker__header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.react-datepicker__current-month {
+  font-size: 14px;
+  color: #333;
+}
+
+.react-datepicker__day {
+  color: #333;
+}
+
+.react-datepicker__day--selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.react-datepicker__day:hover {
+  background-color: #e9ecef;
+}
+
+.react-datepicker__navigation {
+  top: 8px;
+}
+
+.react-datepicker__month-select,
+.react-datepicker__year-select {
+  padding: 2px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+
+.analyze-btn {
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.analyze-btn:hover {
+  background: #0056b3;
+}
+
+.timesheet-table {
+  background: white;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.timesheet-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.timesheet-table th,
+.timesheet-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.timesheet-table thead {
+  background-color: #f8f9fa;
+}
+
+.employee-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.employee-info .name {
+  font-weight: bold;
+}
+
+.employee-info .role {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.note-panel {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.note-content {
+  color: #666;
+  line-height: 1.6;
+}
+
+.note-content p {
+  margin: 8px 0;
+}

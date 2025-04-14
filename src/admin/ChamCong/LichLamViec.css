@@ -1,0 +1,231 @@
+.schedule-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.schedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.store-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.store-selector select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.date-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-selector button {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.date-selector span {
+  font-size: 0.9em;
+  color: #333;
+}
+
+.schedule-content {
+  display: flex;
+  gap: 20px;
+}
+
+.schedule-grid {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  padding: 20px;
+}
+
+.time-slots {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.time-slot {
+  width: 50px;
+  font-size: 0.8em;
+  color: #666;
+  text-align: center;
+}
+
+.employee-schedules {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.employee-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.employee-info {
+  width: 150px;
+  flex-shrink: 0;
+}
+
+.employee-name {
+  font-size: 0.9em;
+  color: #333;
+}
+
+.employee-role {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.shift-blocks {
+  position: relative;
+  flex: 1;
+  height: 30px;
+}
+
+.shift-block {
+  position: absolute;
+  height: 100%;
+  background: #4a90e2;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.target-panel {
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.target-panel h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.target-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.target-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+}
+
+.store-info,
+.date-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.store-info label,
+.date-info label {
+  color: #666;
+}
+
+.target-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+}
+
+.metric label {
+  color: #666;
+}
+
+.target-table {
+  margin-top: 10px;
+}
+
+.target-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+
+.target-table th,
+.target-table td {
+  padding: 8px;
+  text-align: right;
+}
+
+.target-table th:first-child,
+.target-table td:first-child {
+  text-align: left;
+}
+
+.target-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+}
+
+.target-table td {
+  border-top: 1px solid #eee;
+}
+
+/* Thêm style cho các loại ca làm việc khác nhau */
+.shift-block.manager {
+  background: #4a90e2;
+}
+
+.shift-block.supervisor {
+  background: #2ecc71;
+}
+
+.shift-block.cashier {
+  background: #f1c40f;
+}
+
+.shift-block.trainer {
+  background: #e74c3c;
+}
+
+.shift-block.crew {
+  background: #95a5a6;
+}

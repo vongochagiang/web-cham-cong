@@ -1,0 +1,94 @@
+.timesheet-container {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 20px;
+}
+
+.timesheet-table {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.timesheet-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.timesheet-table th,
+.timesheet-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.timesheet-table thead tr:first-child {
+  background-color: #4a6572;
+  color: white;
+}
+
+.timesheet-table .sub-header {
+  background-color: #5c7a8a;
+  color: white;
+}
+
+.timesheet-table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.attendance-records {
+  margin-top: 30px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.attendance-records h3 {
+  color: #4a6572;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.records-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.record-item {
+  padding: 10px;
+  border-bottom: 1px dashed #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.record-day {
+  font-weight: 500;
+  color: #4a6572;
+}
+
+.record-times {
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* Shift colors */
+.timesheet-table td:nth-child(3) {
+  font-weight: 500;
+}
+
+.timesheet-table td:nth-child(3):contains('W') {
+  color: #007bff;
+}
+
+.timesheet-table td:nth-child(3):contains('O') {
+  color: #dc3545;
+}
+
+.timesheet-table td:nth-child(3):contains('H') {
+  color: #28a745;
+}

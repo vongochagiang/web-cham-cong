@@ -1,0 +1,349 @@
+.app-container {
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.header {
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.title-container h1 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.user-info {
+  text-align: right;
+  position: relative;
+  cursor: pointer;
+}
+
+.user-info h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #333;
+}
+
+.user-info .role {
+  color: #666;
+  font-size: 1rem;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  min-width: 150px;
+  z-index: 1000;
+  margin-top: 5px;
+}
+
+.user-dropdown-item {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+  transition: background-color 0.2s;
+}
+
+.user-dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+.user-dropdown-item.logout {
+  color: #dc3545;
+  border-top: 1px solid #eee;
+}
+
+.user-dropdown-item i {
+  font-size: 1.1em;
+}
+
+.nav-tabs {
+  display: flex;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  gap: 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-button {
+  border: none;
+  background: none;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: #666;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-button.active {
+  color: #e4002b;
+}
+
+.tab-button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #e4002b;
+}
+
+.schedule-container {
+  padding: 1rem;
+  background-color: white;
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-title {
+  font-size: 1.2rem;
+  color: white;
+  background-color: #4a5568;
+  padding: 1rem;
+  margin: -1rem -1rem 1rem -1rem;
+  border-radius: 8px 8px 0 0;
+}
+
+.month-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.month-nav {
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #4a90e2;
+}
+
+.save-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.save-icon {
+  font-size: 1.2rem;
+}
+
+.guide-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.guide-text {
+  color: #666;
+}
+
+.guide-icon {
+  color: #4a90e2;
+  border: 1px solid #4a90e2;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.schedule-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.day-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-bottom: 1px dashed #ddd;
+}
+
+.day-number {
+  width: 30px;
+  text-align: left;
+}
+
+.weekday {
+  width: 40px;
+  color: #4a90e2;
+}
+
+.status-box {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  min-width: 100px;
+  text-align: center;
+}
+
+.status-box.work {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  border: 1px solid #bbdefb;
+}
+
+.status-box.free {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.status-box.off {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+}
+
+.time-input {
+  width: 50px;
+  text-align: center;
+  padding: 0.3rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.time-separator {
+  color: #666;
+}
+
+.delete-button {
+  border: none;
+  background: none;
+  color: #666;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.day-checkbox {
+  margin-left: auto;
+}
+
+.shifts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.shift-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shift-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.toggle-shift-button {
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  font-size: 12px;
+  color: #666;
+}
+
+.toggle-shift-button:hover {
+  background-color: #eee;
+}
+
+.status-selector {
+  position: relative;
+}
+
+.status-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 120px;
+}
+
+.status-option {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-align: center;
+  font-weight: 500;
+}
+
+.status-option:hover {
+  background-color: #f5f5f5;
+}
+
+.status-option.free {
+  color: #28a745;
+}
+
+.status-option.off {
+  color: #dc3545;
+}
+
+.status-option.work {
+  color: #007bff;
+}
