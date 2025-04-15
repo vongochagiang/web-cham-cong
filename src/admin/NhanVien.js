@@ -92,13 +92,17 @@ function NhanVien() {
         const idUser = localStorage.getItem('id_user'); // lấy id_user từ người đang đăng nhập
         console.log(idUser); // Kiểm tra xem id_user có tồn tại không
 
-        if (!idUser) {
-          console.error("id_user không có trong localStorage");
-          return;
-         }
-        const response = await fetch(`http://localhost:3001/api/employee/${idUser}`);
+        // if (!idUser) {
+        //   console.error("id_user không có trong localStorage");
+        //   return;
+        //  }
+        
+        // const response = await fetch(`http://localhost:3001/api/employee/${idUser}`);
+        const response = await fetch(`http://localhost:3001/api/nhanvien`);
+
         const data = await response.json();
         setEmployees(data);
+        console.log('data:', data)
       } catch (error) {
         console.error('Lỗi khi lấy dữ liệu nhân viên:', error);
       }

@@ -27,10 +27,11 @@ function Login() {
         email: formData.email,
         password: formData.password
       });
-
+      console.log('email:', formData.email)
       if (response.data.success) {
         const userData = response.data.user;
-        
+        console.log('user-data', userData) 
+     //   return;
         // Lưu thông tin đăng nhập nếu chọn "Ghi nhớ đăng nhập"
         if (formData.rememberMe) {
           localStorage.setItem('user', JSON.stringify(userData));
@@ -45,37 +46,48 @@ function Login() {
           navigate('/', { replace: true }); // Chuyển đến trang DangKy
         }
       }
-    } catch (error) {
-      if (error.response) {
-        // Xử lý các lỗi có response từ server
-        switch (error.response.status) {
-          case 401:
-            setError('Email hoặc mật khẩu không đúng');
-            break;
-          case 404:
-            setError('Không tìm thấy tài khoản với email này');
-            break;
-          case 400:
-            setError('Thông tin đăng nhập không hợp lệ');
-            break;
-          case 500:
-            setError('Lỗi máy chủ. Vui lòng thử lại sau');
-            break;
-          default:
-            setError('Có lỗi xảy ra. Vui lòng thử lại sau.');
-        }
-      } else if (error.request) {
-        // Lỗi không nhận được response
-        setError('Không thể kết nối đến máy chủ. Vui lòng kiểm tra kết nối mạng.');
-      } else {
-        // Lỗi trong quá trình thiết lập request
-        setError('Có lỗi xảy ra khi gửi yêu cầu. Vui lòng thử lại.');
-      }
-      console.error('Chi tiết lỗi đăng nhập:', {
-        message: error.message,
-        status: error.response?.status,
-        data: error.response?.data
-      });
+    } 
+    catch (error) {
+      // if (error.response) {
+      //   // Xử lý các lỗi có response từ server
+      //   switch (error.response.status) {
+      //     case 401:
+      //       setError('Email hoặc mật khẩu không đúng');
+      //       break;
+      //     case 404:
+      //       setError('Không tìm thấy tài khoản với email này');
+      //       break;
+      //     case 400:
+      //       setError('Thông tin đăng nhập không hợp lệ');
+      //       break;
+      //     case 500:
+      //       setError('Lỗi máy chủ. Vui lòng thử lại sau');
+      //       break;
+      //     default:
+      //       setError('Có lỗi xảy ra. Vui lòng thử lại sau.');
+      //   }
+      // } else if (error.request) {
+      //   // Lỗi không nhận được response
+      //   setError('Không thể kết nối đến máy chủ. Vui lòng kiểm tra kết nối mạng.');
+      // } else {
+      //   // Lỗi trong quá trình thiết lập request
+      //   setError('Có lỗi xảy ra khi gửi yêu cầu. Vui lòng thử lại.');
+      // }
+      // console.error('Chi tiết lỗi đăng nhập:', {
+      //   message: error.message,
+      //   status: error.response?.status,
+      //   data: error.response?.data
+      // });
+
+
+      console.error('Error details:', error);
+    if (error.response) {
+      setError(`Server responded with error: ${error.response.status}`);
+    } else if (error.request) {
+      setError('Request made but no response received');
+    } else {
+      setError(`Error in setting up request: ${error.message}`);
+    }
     }
 
 

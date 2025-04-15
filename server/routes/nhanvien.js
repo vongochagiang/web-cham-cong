@@ -22,9 +22,9 @@ router.get('/', (req, res) => {
   const sql = `
     SELECT e.*, u.name_user 
     FROM employee e
-    LEFT JOIN users u ON e.id_user = u.id_user
+    LEFT JOIN user u ON e.id_user = u.id_user
   `;
-  
+  const sql1='select * from user';
   db.query(sql, (err, results) => {
     if (err) {
       return res.status(500).json({ error: err });

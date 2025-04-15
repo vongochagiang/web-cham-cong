@@ -16,7 +16,7 @@ router.post('/login', (req, res) => {
       const user = results[0];
       // Don't send password in response
       const { password_user, ...userWithoutPassword } = user;
-      res.json({ success: true, user: { email, role_user: 'manager' } });
+      res.json({ success: true, user: { email, role_user:user.role_user} });
     } else {
       res.status(401).json({ error: 'Invalid email or password' });
     }
