@@ -1,0 +1,14 @@
+.scan-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #e4002b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .scan-btn:hover {
+    background-color: #b30022;
+  }
+  

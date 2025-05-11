@@ -32,6 +32,9 @@ function Login() {
         const userData = response.data.user;
         console.log('user-data', userData) 
      //   return;
+        // Lưu id_user vào localStorage để các trang khác dùng
+        localStorage.setItem('id_user', userData.id_user);
+        
         // Lưu thông tin đăng nhập nếu chọn "Ghi nhớ đăng nhập"
         if (formData.rememberMe) {
           localStorage.setItem('user', JSON.stringify(userData));

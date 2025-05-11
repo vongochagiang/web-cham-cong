@@ -1,0 +1,41 @@
+.camera-container {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .camera-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 30px;
+  }
+  
+  .camera-video {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    margin: 20px 0;
+  }
+  
+  .camera-buttons {
+    margin-top: 20px;
+  }
+  
+  .camera-btn {
+    background-color: #e60028; /* màu đỏ đậm */
+    border: none;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .camera-btn:hover {
+    background-color: #cc0022;
+  }
+  

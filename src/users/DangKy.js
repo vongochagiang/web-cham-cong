@@ -105,6 +105,29 @@ function DangKy() {
     navigate('/login');
   };
 
+  const handleSave = async () => {
+    try {
+      const res = await fetch('/api/dangky/save', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id_user: userData.id_user,
+          year: currentYear,
+          month: currentMonth,
+          days: days
+        })
+      });
+      const data = await res.json();
+      if (data.success) {
+        alert('Lưu đăng ký lịch làm thành công!');
+      } else {
+        alert('Lưu thất bại: ' + data.message);
+      }
+    } catch (err) {
+      alert('Lỗi kết nối server!');
+    }
+  };
+
   useEffect(() => {
     const newDays = getDaysInMonth(currentMonth, currentYear);
     setDays(newDays);
@@ -130,8 +153,15 @@ function DangKy() {
             className="user-info"
             onClick={() => setShowDropdown(!showDropdown)}
           >
-            <h2>{userData?.name || 'User'}</h2>
-            <span className="role">{userData?.role || 'Role'}</span>
+            {/* <h2>{userData?.name || 'User'}</h2>
+            <span className="role">{userData?.role || 'Role'}</span> */}
+
+
+            <h2>{userData?.name_user || 'User'}</h2>
+            <span className="role">{userData?.role_user || 'Role'}</span>
+
+
+
             {showDropdown && (
               <div className="user-dropdown">
                 <div className="user-dropdown-item">
@@ -154,7 +184,7 @@ function DangKy() {
       <div className="nav-tabs">
         <button 
           className="tab-button"
-          onClick={() => navigate('/bang-cong')}
+          onClick={() => navigate('/cham-cong')}
         >
           Bảng công
         </button>
@@ -165,6 +195,9 @@ function DangKy() {
         >
           Thông tin
         </button>
+
+
+        <button className="tab-button" onClick={() => navigate('/ma-cham-cong')}>Mã chấm công</button>
         <button className="tab-button">PA</button>
       </div>
 
@@ -180,7 +213,7 @@ function DangKy() {
           <button onClick={handleNextMonth} className="month-nav">→</button>
         </div>
 
-        <button className="save-button">
+        <button className="save-button" onClick={handleSave}>
           <span className="save-icon">📋</span> Lưu dữ liệu
         </button>
 

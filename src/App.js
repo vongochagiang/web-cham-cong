@@ -7,8 +7,12 @@ import DangKy from './users/DangKy';
 import BangCong from './users/BangCong';
 import ThongTin from './users/ThongTin';
 import NhanVien from './admin/NhanVien';
+import QuetMa from './admin/QuetMa';
+import Quet_Ma from './admin/Quet_Ma';
 import LichLamViec from './admin/ChamCong/LichLamViec';
 import PhanTichCong from './admin/ChamCong/PhanTichCong';
+import MaChamCong from './users/MaChamCong';
+import TaoNhanVien from './admin/TaoNhanVien';
 
 import './App.css';
 
@@ -91,6 +95,43 @@ function App() {
             </ProtectedRoute>
           } 
         />
+
+
+        <Route 
+          path="/quet-ma" 
+          element={
+            <ProtectedRoute>
+              <QuetMa />
+            </ProtectedRoute>
+          } 
+        />
+
+        <Route 
+          path="/tao-nhan-vien" 
+          element={
+            <ProtectedRoute>
+              <TaoNhanVien />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/quet-ma-camera" 
+          element={
+            <ProtectedRoute>
+              <Quet_Ma />
+            </ProtectedRoute>
+          } 
+        />
+
+        <Route 
+          path="/ma-cham-cong" 
+          element={
+            <ProtectedRoute>
+              <MaChamCong />
+            </ProtectedRoute>
+          } 
+        />
+
         <Route 
           path="/lich-lam-viec" 
           element={
